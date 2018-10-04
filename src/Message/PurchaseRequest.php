@@ -19,6 +19,16 @@ class PurchaseRequest extends AbstractRequest
 
         return $data;
     }
+    
+    public function getInvId()
+    {
+        return $this->getParameter('invid');
+    }
+    
+    public function setInvId($value)
+    {
+        return $this->setParameter('invid', $value);
+    }
 
     public function sendData($data)
     {
