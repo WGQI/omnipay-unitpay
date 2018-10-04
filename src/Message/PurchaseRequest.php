@@ -10,7 +10,7 @@ class PurchaseRequest extends AbstractRequest
     {
         $this->validate('description', 'amount', 'currency');
 
-        $data['account'] = $this->getTransactionId();
+        $data['account'] = $this->getInvId();
         $data['sum'] = $this->getAmount();
         $data['desc'] = $this->getDescription();
         $data['currency'] = $this->getCurrency();
